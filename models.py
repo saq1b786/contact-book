@@ -38,6 +38,22 @@ class ContactBook:
         else:
             print('there was no name that matched in the contacts list')
             return
+        
+    def search(self, search_term: str)-> list:
+
+        searched_list = []
+
+        for item in self.contacts:
+            if search_term.lower() in item.name.lower() or search_term.lower() in item.email.lower() or search_term.lower() in item.category.lower():
+                searched_list.append(item)
+        
+        if not searched_list:
+            print('no matches were found')
+
+        return searched_list
+
+
+
             
 
 
