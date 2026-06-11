@@ -28,6 +28,20 @@ class ContactBook:
         self.contacts.append(contact)
         print('the contact info has been added!')
 
+    def delete_contact(self, name: str):
+
+        for item in self.contacts:
+            if name == item.name:
+                self.contacts.remove(item)
+                print('contact has been removed from contacts list')
+                return
+        else:
+            print('there was no name that matched in the contacts list')
+            return
+            
+
+
+
 
 
         
