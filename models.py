@@ -19,3 +19,17 @@ class Contact:
         }
         return contact_detail
     
+class ContactBook:
+    def __init__(self):
+        self.contacts = []
+    
+    def add_contact(self, contact: Contact):
+
+        self.contacts.append(contact)
+        print('the contact info has been added!')
+
+
+
+        
+
+
