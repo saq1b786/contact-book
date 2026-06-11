@@ -51,6 +51,25 @@ class ContactBook:
             print('no matches were found')
 
         return searched_list
+    
+    def show_all(self) -> None:
+
+        if not self.contacts:
+            print('the list is empty')
+            return
+
+        for item in self.contacts:
+            print(item)
+    
+    def to_list(self) -> list:
+        saved_list = []
+
+        for item in self.contacts:
+            saved_list.append(item.to_dict())
+        return saved_list
+        
+            
+            
 
 
 
