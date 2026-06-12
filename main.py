@@ -8,7 +8,7 @@ def main()-> None:
     for item in loaded_data:
         contact = Contact(item['name'], item['phone_number'], item['email'], item['category'])
         contact_book.add_contact(contact)
-
+        
     while True:
 
         print('1. Add Contact')
